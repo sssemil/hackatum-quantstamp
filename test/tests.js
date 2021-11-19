@@ -16,9 +16,6 @@ function getArgsForEvent(receipt, eventName) {
 }
 
 async function deployContracts(deployer) {
-
-  const taxPercentageValue = BigNumber(0.025).times(BigNumber(10).pow(DECIMALS));
-
   // deploy contracts
   const Bank = await ethers.getContractFactory("Bank");
   const bank = await Bank.deploy();
