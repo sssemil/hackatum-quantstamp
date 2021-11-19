@@ -1,69 +1,49 @@
-// SPDX-License-Identifier: MIT
+//SPDX-License-Identifier: Unlicense
 pragma solidity 0.7.0;
 
-import "./IBank.sol";
+import "./interfaces/IBank.sol";
+import "./interfaces/IPriceOracle.sol";
 
 contract Bank is IBank {
-  function deposit(address token, uint256 amount)
-    external
-    payable
-    override
-    returns (bool)
-  {
-    // TODO
-    return false;
-  }
 
-  function withdraw(address token, uint256 amount)
-    external
-    override
-    returns (uint256)
-  {
-    // TODO
-    return 0;
-  }
+    constructor(address _priceOracle, address _hakToken) {}
+    function deposit(address token, uint256 amount)
+        payable
+        external
+        override
+        returns (bool) {}
 
-  function borrow(address token, uint256 amount)
-    external
-    override
-    returns (uint256)
-  {
-    // TODO
-    return 0;
-  }
+    function withdraw(address token, uint256 amount)
+        external
+        override
+        returns (uint256) {}
 
-  function repay(address token, uint256 amount)
-    external
-    payable
-    override
-    returns (uint256)
-  {
-    // TODO
-    return 0;
-  }
+    function borrow(address token, uint256 amount)
+        external
+        override
+        returns (uint256) {}
 
-  function liquidate(address token, address account)
-    external
-    payable
-    override
-    returns (bool)
-  {
-    // TODO
-    return false;
-  }
+    function repay(address token, uint256 amount)
+        payable
+        external
+        override
+        returns (uint256) {}
 
-  function getCollateralRatio(address token, address account)
-    external
-    view
-    override
-    returns (uint256)
-  {
-    // TODO
-    return 0;
-  }
+    function liquidate(address token, address account)
+        payable
+        external
+        override
+        returns (bool) {}
 
-  function getBalance(address token) external view override returns (uint256) {
-    // TODO
-    return 0;
-  }
+    function getCollateralRatio(address token, address account)
+        view
+        public
+        override
+        returns (uint256) {}
+
+    function getBalance(address token)
+        view
+        public
+        override
+        returns (uint256) {}
 }
