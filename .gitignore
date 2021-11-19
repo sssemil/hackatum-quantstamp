@@ -1,0 +1,9 @@
+node_modules
+.env
+
+#Hardhat files
+cache
+artifacts
+
+# ye ye dont care
+package-lock.json
