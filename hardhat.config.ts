@@ -20,9 +20,9 @@ task("accounts", "Prints the list of accounts", async (args, hre) => {
 module.exports = {
   solidity: "0.7.0",
   networks: {
-    hardhat: {
-      initialBaseFeePerGas: 0,
-    },
+    // hardhat: {
+    //   initialBaseFeePerGas: 0,
+    // },
     goerli: {
       url: "https://eth-goerli.alchemyapi.io/v2/" + process.env.ALCHEMY_API_KEY,
       accounts:

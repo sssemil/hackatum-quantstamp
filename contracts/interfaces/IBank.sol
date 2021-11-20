@@ -90,7 +90,7 @@ interface IBank {
 
     /**
      * The purpose of this function is to allow users to repay their loans.
-     * Loans can be repaid partially or entirely. When replaying a loan, an
+     * Loans can be repaid partially or entirely. When repaying a loan, an
      * interest payment is also required. The interest on a loan is equal to
      * 5% of the amount lent per 100 blocks. If the loan is repaid earlier,
      * or later then the interest should be proportional to the number of
