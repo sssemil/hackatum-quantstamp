@@ -31,6 +31,7 @@ library DSMath {
 
     // TODO: verify this div
     function div(uint256 x, uint256 y) internal pure returns (uint256 z) {
+        require(y > 0, "division by zero");
         return x / y;
     }
 
